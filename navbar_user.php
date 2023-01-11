@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://localhost/DSI31/control_vehicular/navbar.css">
+        <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/navbar.css">
     </head>
     <body>
         <div class="navbar">
@@ -12,7 +12,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="conductores">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -23,7 +23,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="licencias">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -34,7 +34,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="multas">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -45,7 +45,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="oficiales">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -56,7 +56,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="propietarios">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -67,7 +67,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="tarjetas_circulacion">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -78,7 +78,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="vehiculos">
                         <input type="submit" class="button" value="Select">
                     </form>
@@ -89,7 +89,7 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <form method="post" action="http://localhost/DSI31/control_vehicular/select.php">
+                    <form method="post" action="http://localhost/DSI31/proyecto_final/select.php">
                         <input type="hidden" name="table" value="verificaciones">
                         <input type="submit" class="button" value="Select">
                     </form>
