@@ -1,4 +1,4 @@
-<html>
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,59 +8,84 @@
                 })
             }
         </script>
+       <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+
     </head>
     <body>
         <div id="include"></div>
-        <p>
+        <p class="TitG">
             <label>Vehiculos</label>
         </p>
 
-        <form method="post" action="./vehiculos.php">
-            <label>niv</label>
-            <input type="number" id="niv" name="niv">
-            <br>
-            <label>tipo</label>
-            <input type="text" id="tipo" name="tipo">
-            <br>
-            <label>marca</label>
-            <input type="text" id="marca" name="marca">
-            <br>
-            <label>modelo</label>
-            <input type="text" id="modelo" name="modelo">
-            <br>
-            <label>numero_serie</label>
-            <input type="text" id="numero_serie" name="numero_serie">
-            <br>
-            <label>clase</label>
-            <input type="text" id="clase" name="clase">
-            <br>
-            <label>tipo de combustible</label>
-            <input type="text" id="tipo_combustible" name="tipo_combustible">
-            <br>
-            <label>numero de cilindros</label>
-            <input type="text" id="numero_cilindros" name="numero_cilindros">
-            <br>
-            <label>caballos de fuerza</label>
-            <input type="number" id="caballos_fuerza" name="caballos_fuerza">
-            <br>
-            <label>tipo de carroceria</label>
-            <input type="text" id="tipo_carroceria" name="tipo_carroceria">
-            <br>
-            <label>color</label>
-            <input type="text" id="color" name="color">
-            <br>
-            <label>transmision</label>
-            <input type="text" id="transmision" name="transmision">
-            <br>
-            <label>numero de serie del motor</label>
-            <input type="number" id="serie_motor" name="serie_motor">
-            <br>
-            <label>capacidad</label>
-            <input type="text" id="capacidad" name="capacidad">
-            <br>
+        <Div class="Div1">
+            <Div class="Div2">
+            </Div>
 
-            <input type="submit">
+        <form method="post" action="./vehiculos.php">
+
+            <Div class="linea"><label class="LabG">niv</label>
+            <input type="number" id="niv" name="niv" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">tipo</label>
+            <input type="text" id="tipo" name="tipo" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">marca</label>
+            <input type="text" id="marca" name="marca" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">modelo</label>
+            <input type="text" id="modelo" name="modelo" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">numero_serie</label>
+            <input type="text" id="numero_serie" name="numero_serie" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">clase</label>
+            <input type="text" id="clase" name="clase" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">tipo de combustible</label>
+            <input type="text" id="tipo_combustible" name="tipo_combustible" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">numero de cilindros</label>
+            <input type="text" id="numero_cilindros" name="numero_cilindros" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">caballos de fuerza</label>
+            <input type="number" id="caballos_fuerza" name="caballos_fuerza" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">tipo de carroceria</label>
+            <input type="text" id="tipo_carroceria" name="tipo_carroceria" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">color</label>
+            <input type="text" id="color" name="color" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">transmision</label>
+            <input type="text" id="transmision" name="transmision" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">numero de serie del motor</label>
+            <input type="number" id="serie_motor" name="serie_motor" class="FieG">
+            </Div>     
+
+            <Div class="linea"><label class="LabG">capacidad</label>
+            <input type="text" id="capacidad" name="capacidad" class="FieG">
+            </Div>     
+
+            <input type="submit" value="aceptar" class="BotG" class="FieG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+        </Div>
     </body>
 </html>
 <?php

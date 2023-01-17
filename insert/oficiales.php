@@ -1,4 +1,4 @@
-<html>
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,32 +8,48 @@
                 })
             }
         </script>
+               <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+
     </head>
     <body>
         <div id="include"></div>
-        <p>
+        <p class="TitG">
             <label>Oficiales</label>
         </p>
 
-        <form method="post" action="./oficiales.php">
-            <label>nombre</label>
-            <input type="text" id="nombre" name="nombre">
-            <br>
-            <label>apellido paterno</label>
-            <input type="text" id="apellido_paterno" name="apellido_paterno">
-            <br>
-            <label>apellido materno</label>
-            <input type="text" id="apellido_materno" name="apellido_materno">
-            <br>
-            <label>grupo</label>
-            <input type="text" id="grupo" name="grupo">
-            <br>
-            <label>firma</label>
-            <input type="text" id="firma" name="firma">
-            <br>
+        <Div class="Div1">
+            <Div class="Div2">
+            </Div>
 
-            <input type="submit">
+        <form method="post" action="./oficiales.php" class="CueI">
+            
+            <Div class="linea"><label class="LabG">nombre</label>
+            <input type="text" id="nombre" name="nombre" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">apellido paterno</label>
+            <input type="text" id="apellido_paterno" name="apellido_paterno" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">apellido materno</label>
+            <input type="text" id="apellido_materno" name="apellido_materno" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">grupo</label>
+            <input type="text" id="grupo" name="grupo" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">firma</label>
+            <input type="text" id="firma" name="firma" class="FieG">
+            </Div>
+
+            <input type="submit" value="Aceptar" class="BotG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+        </Div>
     </body>
 </html>
 

@@ -1,13 +1,29 @@
-<html>
-    <body>
-        <form method="post" action="./acceso.php">
-            <label for="username">Usuario </label><input type="text" id="username" name="username">
-            <br>
-            <label for="password">Contrasenia </label><input type="password" id="password" name="password">
-            <br>
+<html class="PriB">
 
-            <input type="submit" value="Login">
+<link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+
+    <body>
+
+    <Div class="Div11">
+            <Div class="Div22">
+            </Div>
+        <form method="post" action="./acceso.php">
+
+            <Div class="linea">
+            <label for="username" class="LabG">Usuario </label><input type="text" id="username" name="username" class="FieG">
+            </Div>
+
+            <Div class="linea">
+            <label for="password" class="LabG">Contrasenia </label><input type="password" id="password" name="password" class="FieG">
+            </Div>
+
+            <input type="submit" value="Entrar" class="BotG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+      </Div>
     </body>
 </html>
 

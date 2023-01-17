@@ -1,4 +1,4 @@
-<html>
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,65 +8,92 @@
                 })
             }
         </script>
+       <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+
     </head>
     <body>
         <div id="include"></div>
-        <p>
+        <p class="TitG">
             <label>Tarjetas de Circulacion</label>
         </p>
 
-        <form method="post" action="./tarjetas_circulacion.php">
-            <label>tipo de servicio</label>
-            <input type="text" id="tipo_servicio" name="tipo_servicio">
-            <br>
-            <label>numero de constancia de inscripcion</label>
-            <input type="number" id="numero_constancia_inscripcion" name="numero_constancia_inscripcion">
-            <br>
-            <label>servicio</label>
-            <input type="text" id="servicio" name="servicio">
-            <br>
-            <label>origen</label>
-            <input type="text" id="origen" name="origen">
-            <br>
-            <label>folio</label>
-            <input type="number" id="folio" name="folio">
-            <br>
-            <label>fecha de vencimiento</label>
-            <input type="date" id="fecha_vencimiento" name="fecha_vencimiento">
-            <br>
-            <label>placa</label>
-            <input type="text" id="placa" name="placa">
-            <br>
-            <label>cve vehicular</label>
-            <input type="number" id="cve_vehicular" name="cve_vehicular">
-            <br>
-            <label>uso</label>
-            <input type="text" id="uso" name="uso">
-            <br>
-            <label>operacion</label>
-            <input type="text" id="operacion" name="operacion">
-            <br>
-            <label>fecha de operacion</label>
-            <input type="date" id="fecha_operacion" name="fecha_operacion">
-            <br>
-            <label>oficina expendidora</label>
-            <input type="number" id="oficina_expendidora" name="oficina_expendidora">
-            <br>
-            <label>movimiento</label>
-            <input type="text" id="movimiento" name="movimiento">
-            <br>
-            <label>rfa</label>
-            <input type="number" id="rfa" name="rfa">
-            <br>
-            <label>id del vehiculo</label>
-            <input type="number" id="id_vehiculo" name="id_vehiculo">
-            <br>
-            <label>id del propietario</label>
-            <input type="number" id="id_propietario" name="id_propietario">
-            <br>
+        <Div class="Div1">
+            <Div class="Div2">
+            </Div>
 
-            <input type="submit">
+        <form method="post" action="./tarjetas_circulacion.php" class="CueI">
+
+            <Div class="linea"><label class="LabG">tipo de servicio</label>
+            <input type="text" id="tipo_servicio" name="tipo_servicio" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">numero de constancia de inscripcion</label>
+            <input type="number" id="numero_constancia_inscripcion" name="numero_constancia_inscripcion" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">servicio</label>
+            <input type="text" id="servicio" name="servicio" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">origen</label>
+            <input type="text" id="origen" name="origen" class="FieG">
+            </Div>
+            
+            <Div class="linea"><label class="LabG">folio</label>
+            <input type="number" id="folio" name="folio" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">fecha de vencimiento</label>
+            <input type="date" id="fecha_vencimiento" name="fecha_vencimiento" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">placa</label>
+            <input type="text" id="placa" name="placa" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">cve vehicular</label>
+            <input type="number" id="cve_vehicular" name="cve_vehicular" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">uso</label>
+            <input type="text" id="uso" name="uso" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">operacion</label>
+            <input type="text" id="operacion" name="operacion" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">fecha de operacion</label>
+            <input type="date" id="fecha_operacion" name="fecha_operacion" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">oficina expendidora</label>
+            <input type="number" id="oficina_expendidora" name="oficina_expendidora" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">movimiento</label>
+            <input type="text" id="movimiento" name="movimiento" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">rfa</label>
+            <input type="number" id="rfa" name="rfa" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">id del vehiculo</label>
+            <input type="number" id="id_vehiculo" name="id_vehiculo" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">id del propietario</label>
+            <input type="number" id="id_propietario" name="id_propietario" class="FieG">
+            </Div>
+
+            <input type="submit" value="Aceptar" class="BotG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+        </Div>
     </body>
 </html>
 <?php

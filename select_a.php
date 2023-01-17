@@ -1,4 +1,4 @@
-<html>
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,17 +8,22 @@
                 })
             }
         </script>
+       <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
     </head>
     <body>
         <div id="include"></div>
 
-        <p>
+        <p class="TitG">
             <label>Select <?php if(isset($_POST["table"])) echo $_POST["table"]; else echo "conductores"?></label>
         </p>
 
+        <Div class="Div1">
+            <Div class="Div2">
+            </Div>
+
         <form method="post" action="./select_a.php">
-            <label for="id">ID </label><input type="text" id="id" name="id" value=<?php if(isset($_POST["id"])) echo $_POST["id"]?>>
-            <br>
+        <Div class="linea"><label for="id" class="LabG">ID </label><input type="text" id="id" name="id" class="FieG" value=<?php if(isset($_POST["id"])) echo $_POST["id"]?>>
+        </Div>
 
             <label hidden for="table">Tabla </label>
             <select hidden id="table" name="table">
@@ -33,8 +38,13 @@
             </select>
             <br>
 
-            <input type="submit" name="select">
+            <input type="submit" name="select" value="Aceptar" class="BotG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+        </Div>
     </body>
 </html>
 

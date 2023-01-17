@@ -1,4 +1,4 @@
-<html>
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,35 +8,52 @@
                 })
             }
         </script>
+       <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+
     </head>
     <body>
         <div id="include"></div>
-        <p>
+        <p class="TitG">
             <label>Propietarios</label>
         </p>
 
-        <form method="post" action="./propietarios.php">
-            <label>nombre</label>
-            <input type="text" id="nombre" name="nombre">
-            <br>
-            <label>apellido paterno</label>
-            <input type="text" id="apellido_paterno" name="apellido_paterno">
-            <br>
-            <label>apellido materno</label>
-            <input type="text" id="apellido_materno" name="apellido_materno">
-            <br>
-            <label>localidad</label>
-            <input type="text" id="localidad" name="localidad">
-            <br>
-            <label>municipio</label>
-            <input type="text" id="municipio" name="municipio">
-            <br>
-            <label>rfc</label>
-            <input type="text" id="rfc" name="rfc">
-            <br>
+        <Div class="Div1">
+            <Div class="Div2">
+            </Div>
 
-            <input type="submit">
+        <form method="post" action="./propietarios.php">
+
+            <Div class="linea"><label class="LabG">nombre</label>
+            <input type="text" id="nombre" name="nombre" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">apellido paterno</label>
+            <input type="text" id="apellido_paterno" name="apellido_paterno" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">apellido materno</label>
+            <input type="text" id="apellido_materno" name="apellido_materno" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">localidad</label>
+            <input type="text" id="localidad" name="localidad" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">municipio</label>
+            <input type="text" id="municipio" name="municipio" class="FieG">
+            </Div>
+
+            <Div class="linea"><label class="LabG">rfc</label>
+            <input type="text" id="rfc" name="rfc" class="FieG">
+            </Div>
+
+            <input type="submit" value="Aceptar" class="BotG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+        </Div>
     </body>
 </html>
 <?php
