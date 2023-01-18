@@ -15,6 +15,7 @@ class PDF extends PDF_MySQL_Table
 }
 
 function GeneratePDF(string $table, string $key, string $value): void {
+    GenerateXML($table, $key, $value);
     $width = 400;
     if ($table == "vehiculos") {
         $width = 600;
@@ -24,6 +25,22 @@ function GeneratePDF(string $table, string $key, string $value): void {
     $pdf->AddPage("L");
     $pdf->Table("SELECT * FROM $table WHERE $key = '$value'");
     $pdf->Output();
+}
+
+function GenerateXML(string $table, string $key, string $value): void {
+    $xml = new SimpleXMLElement('<objects/>');
+    $results = RunQuery("SELECT * FROM $table WHERE $key = '$value'");
+    foreach ($results->result as $key => $var) {
+        if ($key === 0) {
+            foreach ($var as $k => $v) {
+                $obj = $xml->addChild('attribute');
+                $obj->addChild('name', $k);
+                $obj->addChild('value', $v);
+            }
+        }
+    }
+
+    $xml->asXML("../xmls/respaldo_$table-$value.xml");
 }
 
 class UploadResults

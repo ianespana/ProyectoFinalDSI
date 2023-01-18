@@ -1,7 +1,9 @@
 <?php
     session_start();
 
-    if (isset($_SESSION["logged_in_user_id"]) && isset($_SESSION["logged_in_user_admin"]) && $_SESSION["logged_in_user_admin"]) {
+    if (!(isset($_SESSION["logged_in_user_id"]) || isset($_SESSION["logged_in_user_admin"]) || $_SESSION["logged_in_user_admin"])) {
+        header("Location:../acceso.php");
+    }
 ?>
 <html>
     <head>
@@ -55,10 +57,6 @@
 </html>
 
 <?php
-    } else {
-        header("Location:../acceso.php");
-    }
-
     include "../sql_lib.php";
     include "../utils.php";
 
