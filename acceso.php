@@ -1,29 +1,23 @@
-<html class="PriB">
-
-<link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
-
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
     <body>
+        <div class="container">
+            <form method="post" action="./acceso.php">
+                <p>
+                <h1>Iniciar Sesión</h1>
+                </p>
 
-    <Div class="Div11">
-            <Div class="Div22">
-            </Div>
-        <form method="post" action="./acceso.php">
+                <label for="username">Usuario </label><input type="text" id="username" name="username">
+                <br>
+                <label for="password">Contraseña </label><input type="password" id="password" name="password">
+                <br>
 
-            <Div class="linea">
-            <label for="username" class="LabG">Usuario </label><input type="text" id="username" name="username" class="FieG">
-            </Div>
-
-            <Div class="linea">
-            <label for="password" class="LabG">Contrasenia </label><input type="password" id="password" name="password" class="FieG">
-            </Div>
-
-            <input type="submit" value="Entrar" class="BotG">
-
-            <Div class="Div2">
-            </Div>
-
-        </form>
-      </Div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
     </body>
 </html>
 
