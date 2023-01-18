@@ -1,4 +1,4 @@
-<html class="PriB">
+<html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,59 +8,55 @@
                 })
             }
         </script>
-               <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
-
+        <link rel="stylesheet" href="../main.css">
     </head>
     <body>
         <div id="include"></div>
-        <p class="TitG">
-            <label>Licencias</label>
-        </p>
-        <Div class="Div1">
-        <form method="post" action="./licencias.php" class="CueI">
-        <Div class="Div2">
-            </Div>
 
-            <Div class="linea"><label class="LabG">id</label>
-            <input type="text" id="id" name="id" class="FieG">
-            </Div>
+        <div class="container">
+            <form class="main-input" method="post" action="./licencias.php">
+                <p>
+                <h1>Licencias</h1>
+                </p>
 
-            <Div class="linea"><label class="LabG">tipo</label>
-            <select id="tipo" name="tipo" class="FieG">
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
-                <option>D</option>
-                <option>PM</option>
-            </select>
-            </Div>
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id" placeholder="ID">
+                <br>
 
-            <Div class="linea"><label class="LabG">fecha de expedicion</label>
-            <input type="date" id="fecha_expedicion" name="fecha_expedicion" class="FieG">
-            </Div>
+                <label for="tipo">Tipo</label>
+                <select id="tipo" name="tipo">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>PM</option>
+                </select>
+                <br>
 
-            <Div class="linea"> <label class="LabG">fecha de vencimiento</label>
-            <input type="date" id="fecha_vencimiento" name="fecha_vencimiento" class="FieG">
-            </Div>
+                <label for="fecha_expedicion">Fecha de Expedicion</label>
+                <input type="date" id="fecha_expedicion" name="fecha_expedicion">
+                <br>
 
-            <Div class="linea"><label class="LabG">atributo desconocido</label>
-            <input type="text" id="atributo_desconocido" name="atributo_desconocido" class="FieG">
-            </Div>
+                <label for="fecha_vencimiento">Fecha de Vencimiento</label>
+                <input type="date" id="fecha_vencimiento" name="fecha_vencimiento">
+                <br>
 
-            <Div class="linea"><label class="LabG">observacion</label>
-            <input type="text" id="observacion" name="observacion" class="FieG">
-            </Div>
+                <label for="atributo_desconocido">Atributo Desconocido</label>
+                <input type="text" id="atributo_desconocido" name="atributo_desconocido"
+                       placeholder="Atributo Desconocido">
+                <br>
 
-            <Div class="linea"><label class="LabG">id del conductor</label>
-            <input type="number" id="id_conductor" name="id_conductor" class="FieG">
-            </Div>
+                <label for="observacion">Observacion</label>
+                <input type="text" id="observacion" name="observacion" placeholder="Observacion">
+                <br>
 
-            <input type="submit" value="Aceptar" class="BotG">
+                <label for="id_conductor">ID del Conductor</label>
+                <input type="number" id="id_conductor" name="id_conductor" placeholder="ID del Conductor">
+                <br>
 
-            <Div class="Div2">
-            </Div>
-
-        </form></Div>
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>
 

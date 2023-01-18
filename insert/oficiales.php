@@ -1,4 +1,4 @@
-<html class="PriB">
+<html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,48 +8,40 @@
                 })
             }
         </script>
-               <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
-
+        <link rel="stylesheet" href="../main.css">
     </head>
     <body>
         <div id="include"></div>
-        <p class="TitG">
-            <label>Oficiales</label>
-        </p>
 
-        <Div class="Div1">
-            <Div class="Div2">
-            </Div>
+        <div class="container">
+            <form class="main-input" method="post" action="./oficiales.php" enctype="multipart/form-data">
+                <p>
+                <h1>Oficiales</h1>
+                </p>
 
-        <form method="post" action="./oficiales.php" enctype="multipart/form-data" class="CueI">
-            
-            <Div class="linea"><label class="LabG">nombre</label>
-            <input type="text" id="nombre" name="nombre" class="FieG">
-            </Div>
+                <label>Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <br>
 
-            <Div class="linea"><label class="LabG">apellido paterno</label>
-            <input type="text" id="apellido_paterno" name="apellido_paterno" class="FieG">
-            </Div>
+                <label>Apellido Paterno</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Apellido Paterno">
+                <br>
 
-            <Div class="linea"><label class="LabG">apellido materno</label>
-            <input type="text" id="apellido_materno" name="apellido_materno" class="FieG">
-            </Div>
+                <label>Apellido Materno</label>
+                <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido Materno">
+                <br>
 
-            <Div class="linea"><label class="LabG">grupo</label>
-            <input type="text" id="grupo" name="grupo" class="FieG">
-            </Div>
+                <label>Grupo</label>
+                <input type="text" id="grupo" name="grupo" placeholder="Grupo">
+                <br>
 
-            <Div class="linea"><label class="LabG">firma</label>
-            <input type="file" id="firma_file" name="firma_file" class="FieG">
-            </Div>
+                <label>Firma</label>
+                <input type="file" id="firma_file" name="firma_file" placeholder="Firma">
+                <br>
 
-            <input type="submit" value="Aceptar" class="BotG">
-
-            <Div class="Div2">
-            </Div>
-
-        </form>
-        </Div>
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>
 
@@ -61,7 +53,8 @@
         $uploadResult = ProcessUpload($_FILES, "firma_file");
         if ($uploadResult->valid){
             if (move_uploaded_file($uploadResult->urlTemp, $uploadResult->urlTarget)) {
-                $_POST["firma"] = $uploadResult->urlTarget;
+                $_POST["firma"] = $uploadResult->urlRelativeDir;
+                print($uploadResult->urlRelativeDir);
                 $results = InsertArray("oficiales", $_POST, ["id", "firma_file"]);
 
                 print("<br>Filas aftectadas: " . $results->affectedRows);
