@@ -8,29 +8,29 @@ function Header()
     // Logo
     //No hay logo xd
     // Arial bold 15
-    $this->SetFont('Arial','B',12);
+    $this->SetFont('Arial','B',15);
     // Movernos a la derecha
     $this->Cell(60);
     // Título
-    $this->Cell(160,10,'Reporte de Vehiculos',0,0,'C');
+    $this->Cell(340,10,'Reporte de Vehiculos',0,0,'C');
     // Salto de línea
     $this->Ln(20);
 
-    $this->Cell(10, 10, 'ID', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Niv', 1, 0, 'C', 0);
-    $this->Cell(26, 10, 'Tipo', 1, 0, 'C', 0);
-    $this->Cell(25, 10, 'Marca', 1, 0, 'C', 0);
-    $this->Cell(25, 10, 'Modelo', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Num Serie', 1, 0, 'C', 0);
-    $this->Cell(20, 10, 'Clase', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Combustible', 1, 0, 'C', 0);
-    $this->Cell(21, 10, 'Cilindros', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Caballos de Fuerza', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Tipo de Carroceria', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Color', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Transmision', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Serie Motor', 1, 0, 'C', 0);
-    $this->Cell(28, 10, 'Capacidad', 1, 1, 'C', 0);
+    $this->Cell(13, 20, 'ID', 1, 0, 'C', 0);
+    $this->Cell(28, 20, 'Niv', 1, 0, 'C', 0);
+    $this->Cell(26, 20, 'Tipo', 1, 0, 'C', 0);
+    $this->Cell(25, 20, 'Marca', 1, 0, 'C', 0);
+    $this->Cell(28, 20, 'Modelo', 1, 0, 'C', 0);
+    $this->Cell(32, 20, 'Num Serie', 1, 0, 'C', 0);
+    $this->Cell(30, 20, 'Clase', 1, 0, 'C', 0);
+    $this->Cell(35, 20, 'Combustible', 1, 0, 'C', 0);
+    $this->Cell(25, 20, 'Cilindros', 1, 0, 'C', 0);
+    $this->Cell(50, 20, 'Caballos de Fuerza', 1, 0, 'C', 0);
+    $this->Cell(50, 20, 'Tipo de Carroceria', 1, 0, 'C', 0);
+    $this->Cell(28, 20, 'Color', 1, 0, 'C', 0);
+    $this->Cell(34, 20, 'Transmision', 1, 0, 'C', 0);
+    $this->Cell(32, 20, 'Serie Motor', 1, 0, 'C', 0);
+    $this->Cell(28, 20, 'Capacidad', 1, 1, 'C', 0);
 
 }
 
@@ -53,28 +53,28 @@ $resultado = Connect()->query($consulta);
 
 
 
-$pdf = new PDF("L", "mm", array(400,100));
+$pdf = new PDF("L", "mm", array(480,120));
 
 $pdf-> AliasNbPages();
 $pdf->AddPage("L");
-$pdf->SetFont('Arial','',11);
+$pdf->SetFont('Arial','',13);
 
 $row = $resultado->fetch_assoc();
-    $pdf->Cell(10, 10, $row['id'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['niv'], 1, 0, 'C', 0);
-    $pdf->Cell(26, 10, utf8_decode($row['tipo']), 1, 0, 'C', 0);
-    $pdf->Cell(25, 10, $row['marca'], 1, 0, 'C', 0);
-    $pdf->Cell(25, 10, $row['modelo'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['numero_serie'], 1, 0, 'C', 0);
-    $pdf->Cell(20, 10, $row['clase'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['tipo_combustible'], 1, 0, 'C', 0);
-    $pdf->Cell(21, 10, $row['numero_cilindros'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['caballos_fuerza'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['tipo_carroceria'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['color'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['transmision'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['serie_motor'], 1, 0, 'C', 0);
-    $pdf->Cell(28, 10, $row['capacidad'], 1, 0, 'C', 0);
+    $pdf->Cell(13, 20, $row['id'], 1, 0, 'C', 0);
+    $pdf->Cell(28, 20, $row['niv'], 1, 0, 'C', 0);
+    $pdf->Cell(26, 20, utf8_decode($row['tipo']), 1, 0, 'C', 0);
+    $pdf->Cell(25, 20, $row['marca'], 1, 0, 'C', 0);
+    $pdf->Cell(28, 20, $row['modelo'], 1, 0, 'C', 0);
+    $pdf->Cell(32, 20, $row['numero_serie'], 1, 0, 'C', 0);
+    $pdf->Cell(30, 20, $row['clase'], 1, 0, 'C', 0);
+    $pdf->Cell(35, 20, $row['tipo_combustible'], 1, 0, 'C', 0);
+    $pdf->Cell(25, 20, $row['numero_cilindros'], 1, 0, 'C', 0);
+    $pdf->Cell(50, 20, $row['caballos_fuerza'], 1, 0, 'C', 0);
+    $pdf->Cell(50, 20, $row['tipo_carroceria'], 1, 0, 'C', 0);
+    $pdf->Cell(28, 20, $row['color'], 1, 0, 'C', 0);
+    $pdf->Cell(34, 20, utf8_decode($row['transmision']), 1, 0, 'C', 0);
+    $pdf->Cell(32, 20, $row['serie_motor'], 1, 0, 'C', 0);
+    $pdf->Cell(28, 20, $row['capacidad'], 1, 0, 'C', 0);
 
 
 
