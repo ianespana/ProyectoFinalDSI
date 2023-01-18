@@ -1,24 +1,32 @@
-<html>
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
+            
             window.onload = function(){
                 $.get("./navbar_user.php", function(data){
                     $("#include").html(data);
                 })
             }
         </script>
+        <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+
     </head>
+    
     <body>
         <div id="include"></div>
 
-        <p>
+        <p class="TitG" >
             <label>Select <?php if(isset($_POST["table"])) echo $_POST["table"]; else echo "conductores"?></label>
         </p>
 
-        <form method="post" action="./select.php">
-            <label for="id">ID </label><input type="text" id="id" name="id" value=<?php if(isset($_POST["id"])) echo $_POST["id"]?>>
-            <br>
+        <Div class="Div1">
+            <Div class="Div2">
+            </Div>
+
+        <form method="post" action="./select.php" class="CueI">
+        <Div class="linea"><label for="id" class="LabG">ID </label><input type="text" id="id" name="id" class="FieG" value=<?php if(isset($_POST["id"])) echo $_POST["id"]?>>
+        </Div>
 
             <label hidden for="table">Tabla </label>
             <select hidden id="table" name="table">
@@ -31,10 +39,14 @@
                 <option <?php if(isset($_POST["table"]) && $_POST["table"] == "vehiculos") echo "selected"?> value="vehiculos">Vehiculos</option>
                 <option <?php if(isset($_POST["table"]) && $_POST["table"] == "verificaciones") echo "selected"?> value="verificaciones">Verificaciones</option>
             </select>
-            <br>
 
-            <input type="submit" name="select">
+            <input type="submit" value="Aceptar" class="BotG">
+
+            <Div class="Div2">
+            </Div>
+
         </form>
+      </Div>
     </body>
 </html>
 
