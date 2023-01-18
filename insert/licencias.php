@@ -1,5 +1,7 @@
 <?php
-if( !isset($_POST['id']) ) {
+    session_start();
+
+    if(isset($_SESSION["logged_in_user_id"]) && isset($_SESSION["logged_in_user_admin"]) && $_SESSION["logged_in_user_admin"] && !isset($_POST['id']) ) {
 ?>
 <html>
     <head>
@@ -64,6 +66,8 @@ if( !isset($_POST['id']) ) {
 </html>
 
 <?php
+    } else {
+        header("Location:../acceso.php");
     }
 
     include "../sql_lib.php";

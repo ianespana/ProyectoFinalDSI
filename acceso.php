@@ -1,3 +1,17 @@
+<?php
+    session_start();
+
+    if(isset($_POST["logout"]) && isset($_SESSION["logged_in_user_id"])) {
+        unset($_SESSION["logged_in_user_id"]);
+        if (isset($_SESSION["logged_in_user_admin"])) {
+            unset($_SESSION["logged_in_user_admin"]);
+        }
+    } else if (isset($_SESSION["logged_in_user_id"]) && isset($_SESSION["logged_in_user_admin"]) && $_SESSION["logged_in_user_admin"]) {
+        header("Location:select_a.php");
+    } else if (isset($_SESSION["logged_in_user_id"])) {
+        header("Location:select.php");
+    }
+?>
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -64,7 +78,11 @@
         RunQuery($query);
     }
 
+    $_SESSION["logged_in_user_id"] = $row[0];
+    $_SESSION["logged_in_user_admin"] = false;
+
     if ($row[2] == "admin") {
+        $_SESSION["logged_in_user_admin"] = true;
         header("Location:select_a.php");
         return;
     }

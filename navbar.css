@@ -41,6 +41,11 @@ body {
     margin: 0;
 }
 
+.dropdown-right {
+    float: right;
+    overflow: hidden;
+}
+
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }

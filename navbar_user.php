@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,6 +93,12 @@
                         <input type="submit" class="button" value="Select">
                     </form>
                 </div>
+            </div>
+            <div class="dropdown dropdown-right">
+                <form method="post" action="http://localhost/DSI31/proyecto_final/acceso.php">
+                    <input type="hidden" name="logout" value="logout">
+                    <input type="submit" class="button dropbtn" value="Cerrar Sesión">
+                </form>
             </div>
         </div>
     </body>

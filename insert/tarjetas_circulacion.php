@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION["logged_in_user_id"]) && isset($_SESSION["logged_in_user_admin"]) && $_SESSION["logged_in_user_admin"]) {
+?>
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -92,6 +97,10 @@
 </html>
 
 <?php
+    } else {
+        header("Location:../acceso.php");
+    }
+
     include "../sql_lib.php";
     include "../utils.php";
 
