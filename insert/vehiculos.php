@@ -1,3 +1,6 @@
+<?php
+if( !isset($_POST['niv']) ) {
+?>
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -82,10 +85,13 @@
 </html>
 
 <?php
+    }
+
     include "../sql_lib.php";
     include "../utils.php";
 
     if(isset($_POST["niv"])) {
         $results = InsertArray("vehiculos", $_POST, ["id"]);
+        GeneratePDF("vehiculos", "id", $results->insertId);
         print("<br>Filas aftectadas: " . $results->affectedRows);
     }

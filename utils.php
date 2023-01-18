@@ -1,4 +1,31 @@
 <?php
+include "pdf_mysql.php";
+
+class PDF extends PDF_MySQL_Table
+{
+    function Header()
+    {
+        // Title
+        $this->SetFont('Arial','',18);
+        $this->Cell(160,10,'Reporte',0,1,'C');
+        $this->Ln(20);
+        // Ensure table header is printed
+        parent::Header();
+    }
+}
+
+function GeneratePDF(string $table, string $key, string $value): void {
+    $width = 400;
+    if ($table == "vehiculos") {
+        $width = 600;
+    }
+
+    $pdf = new PDF("L", "mm", array($width,100));
+    $pdf->AddPage("L");
+    $pdf->Table("SELECT * FROM $table WHERE $key = '$value'");
+    $pdf->Output();
+}
+
 class UploadResults
 {
     public bool $valid = false;

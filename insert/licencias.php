@@ -1,3 +1,6 @@
+<?php
+if( !isset($_POST['id']) ) {
+?>
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -20,7 +23,7 @@
                 </p>
 
                 <label for="id">ID</label>
-                <input type="text" id="id" name="id" placeholder="ID">
+                <input type="text" id="id" name="id" placeholder="ID" minlength="10" maxlength="10">
                 <br>
 
                 <label for="tipo">Tipo</label>
@@ -61,10 +64,13 @@
 </html>
 
 <?php
+    }
+
     include "../sql_lib.php";
     include "../utils.php";
 
     if(isset($_POST["id"])) {
         $results = InsertArray("licencias", $_POST, []);
+        GeneratePDF("licencias", "id", $_POST["id"]);
         print("<br>Filas aftectadas: " . $results->affectedRows);
     }
