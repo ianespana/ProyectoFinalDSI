@@ -21,7 +21,7 @@
             <Div class="Div2">
             </Div>
 
-        <form method="post" action="./oficiales.php" class="CueI">
+        <form method="post" action="./oficiales.php" enctype="multipart/form-data" class="CueI">
             
             <Div class="linea"><label class="LabG">nombre</label>
             <input type="text" id="nombre" name="nombre" class="FieG">
@@ -40,7 +40,7 @@
             </Div>
 
             <Div class="linea"><label class="LabG">firma</label>
-            <input type="text" id="firma" name="firma" class="FieG">
+            <input type="file" id="firma_file" name="firma_file" class="FieG">
             </Div>
 
             <input type="submit" value="Aceptar" class="BotG">
@@ -55,17 +55,20 @@
 
 <?php
     include "../sql_lib.php";
+    include "../utils.php";
 
     if(isset($_POST["nombre"])) {
-        $query = "INSERT INTO oficiales SET";
-        foreach ($_POST as $key => $value) {
-            if ($key != "id" && $value) {
-                $query .= " $key = '$value',";
-            }
-        }
-        $query = rtrim($query, ",");
-        $results = RunQuery($query);
+        $uploadResult = ProcessUpload($_FILES, "firma_file");
+        if ($uploadResult->valid){
+            if (move_uploaded_file($uploadResult->urlTemp, $uploadResult->urlTarget)) {
+                $_POST["firma"] = $uploadResult->urlTarget;
+                $results = InsertArray("oficiales", $_POST, ["id", "firma_file"]);
 
-        print("<br>$query");
-        print("<br>Filas aftectadas: " . $results->affectedRows);
+                print("<br>Filas aftectadas: " . $results->affectedRows);
+            } else {
+                print("Ha habido un error al cargar tu archivo.");
+            }
+        } else {
+            print($uploadResult->error);
+        }
     }

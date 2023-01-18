@@ -1,5 +1,4 @@
-<!-- Prueba -->
-<html class="PriB"> 
+<html class="PriB">
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -22,7 +21,7 @@
             <Div class="Div2">
             </Div>
 
-            <form method="post" action="./conductores.php" class="CueI">
+            <form method="post" action="./conductores.php" enctype="multipart/form-data" class="CueI">
                 
             <Div class="linea"><label class="LabG">nombre</label>
             <input type="text" id="nombre" name="nombre" class="FieG">
@@ -50,8 +49,8 @@
             </Div>    
 
             <Div class="linea"><label class="LabG">firma</label>
-            <input type="text" id="firma" name="firma" class="FieG">
-            </Div>   
+            <input type="file" id="firma_file" name="firma_file" class="FieG">
+            </Div>
 
             <Div class="linea"><label class="LabG">numero de emergencia</label>
             <input type="number" id="num_emergencia" name="num_emergencia" class="FieG">
@@ -93,17 +92,20 @@
 
 <?php
     include "../sql_lib.php";
+    include "../utils.php";
 
     if(isset($_POST["nombre"])) {
-        $query = "INSERT INTO conductores SET";
-        foreach ($_POST as $key => $value) {
-            if ($key != "id" && $value) {
-                $query .= " $key = '$value',";
-            }
-        }
-        $query = rtrim($query, ",");
-        $results = RunQuery($query);
+        $uploadResult = ProcessUpload($_FILES, "firma_file");
+        if ($uploadResult->valid){
+            if (move_uploaded_file($uploadResult->urlTemp, $uploadResult->urlTarget)) {
+                $_POST["firma"] = $uploadResult->urlTarget;
+                $results = InsertArray("conductores", $_POST, ["id", "firma_file"]);
 
-        print("<br>$query");
-        print("<br>Filas aftectadas: " . $results->affectedRows);
+                print("<br>Filas aftectadas: " . $results->affectedRows);
+            } else {
+                print("Ha habido un error al cargar tu archivo.");
+            }
+        } else {
+            print($uploadResult->error);
+        }
     }
