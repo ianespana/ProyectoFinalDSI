@@ -1,4 +1,4 @@
-<html class="PriB">
+<html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,52 +8,44 @@
                 })
             }
         </script>
-       <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
-
+        <link rel="stylesheet" href="../main.css">
     </head>
     <body>
         <div id="include"></div>
-        <p class="TitG">
-            <label>Propietarios</label>
-        </p>
 
-        <Div class="Div1">
-            <Div class="Div2">
-            </Div>
+        <div class="container">
+            <form class="main-input" method="post" action="./propietarios.php">
+                <p>
+                <h1>Propietarios</h1>
+                </p>
 
-        <form method="post" action="./propietarios.php">
+                <label>Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <br>
 
-            <Div class="linea"><label class="LabG">nombre</label>
-            <input type="text" id="nombre" name="nombre" class="FieG">
-            </Div>
+                <label>Apellido Paterno</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Apellido Paterno">
+                <br>
 
-            <Div class="linea"><label class="LabG">apellido paterno</label>
-            <input type="text" id="apellido_paterno" name="apellido_paterno" class="FieG">
-            </Div>
+                <label>Apellido Materno</label>
+                <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido Materno">
+                <br>
 
-            <Div class="linea"><label class="LabG">apellido materno</label>
-            <input type="text" id="apellido_materno" name="apellido_materno" class="FieG">
-            </Div>
+                <label>Localidad</label>
+                <input type="text" id="localidad" name="localidad" placeholder="Localidad">
+                <br>
 
-            <Div class="linea"><label class="LabG">localidad</label>
-            <input type="text" id="localidad" name="localidad" class="FieG">
-            </Div>
+                <label>Municipio</label>
+                <input type="text" id="municipio" name="municipio" placeholder="Municipio">
+                <br>
 
-            <Div class="linea"><label class="LabG">municipio</label>
-            <input type="text" id="municipio" name="municipio" class="FieG">
-            </Div>
+                <label>RFC</label>
+                <input type="text" id="rfc" name="rfc" placeholder="RFC">
+                <br>
 
-            <Div class="linea"><label class="LabG">rfc</label>
-            <input type="text" id="rfc" name="rfc" class="FieG">
-            </Div>
-
-            <input type="submit" value="Aceptar" class="BotG">
-
-            <Div class="Div2">
-            </Div>
-
-        </form>
-        </Div>
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>
 

@@ -1,4 +1,4 @@
-<html class="PriB">
+<html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,128 +8,125 @@
                 })
             }
         </script>
-               <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
-
+        <link rel="stylesheet" href="../main.css">
     </head>
     <body>
         <div id="include"></div>
-        <p class="TitG">
-            <label>Multas</label>
-        </p>
 
-        <Div class="Div1">
-            <Div class="Div2">
-            </Div>
+        <div class="container">
+            <form class="main-input" method="post" action="./multas.php">
+                <p>
+                <h1>Multas</h1>
+                </p>
 
-        <form method="post" action="./multas.php" class="CueI">
-            
-            <Div class="linea"><label class="LabG">folio</label>
-            <input type="text" id="id" name="id" class="FieG">
-            </Div>
+                <label for="id">Folio</label>
+                <input type="text" id="id" name="id" placeholder="Folio">
+                <br>
 
-            <Div class="linea"><label class="LabG">dia</label>
-            <input type="number" id="dia" name="dia" class="FieG">
-            </Div>
+                <label for="dia">Dia</label>
+                <input type="number" id="dia" name="dia" placeholder="Dia" min="1" max="31">
+                <br>
 
-            <Div class="linea"><label class="LabG">mes</label>
-            <input type="number" id="mes" name="mes" class="FieG">
-            </Div>
+                <label>Mes</label>
+                <input type="number" id="mes" name="mes" placeholder="Mes" min="1" max="12">
+                <br>
 
-            <Div class="linea"><label class="LabG">anio</label>
-            <input type="number" id="anio" name="anio" class="FieG">
-            </Div>
+                <label>Anio</label>
+                <input type="number" id="anio" name="anio" placeholder="Anio" min="1997" max="2100">
+                <br>
 
-            <Div class="linea"><label class="LabG">hora</label>
-            <input type="time" id="hora" name="hora" class="FieG">
-            </Div>
+                <label>Hora</label>
+                <input type="time" id="hora" name="hora">
+                <br>
 
-            <Div class="linea"><label class="LabG">reporte de seccion</label>
-            <input type="text" id="reporte_seccion" name="reporte_seccion" class="FieG">
-            </Div>
+                <label>Reporte de Seccion</label>
+                <input type="text" id="reporte_seccion" name="reporte_seccion" placeholder="Reporte de Seccion">
+                <br>
 
-            <Div class="linea"><label class="LabG">nombre de la via</label>
-            <input type="text" id="nombre_via" name="nombre_via" class="FieG">
-            </Div>
+                <label>Nombre de la Via</label>
+                <input type="text" id="nombre_via" name="nombre_via" placeholder="Nombre de la Via">
+                <br>
 
-            <Div class="linea"><label class="LabG">kilometro</label>
-            <input type="number" id="kilometro" name="kilometro" class="FieG">
-            </Div>
+                <label>kilometro</label>
+                <input type="number" id="kilometro" name="kilometro" placeholder="Kilometro">
+                <br>
 
-            <Div class="linea"><label class="LabG">direccion o sentido</label>
-            <input type="text" id="direccion_sentido" name="direccion_sentido" class="FieG">
-            </Div>
+                <label>Direccion o Sentido</label>
+                <input type="text" id="direccion_sentido" name="direccion_sentido" placeholder="Apellido Materno">
+                <br>
 
-            <Div class="linea"><label class="LabG">municipio</label>
-            <input type="text" id="municipio" name="municipio" class="FieG">
-            </Div>
+                <label>Municipio</label>
+                <input type="text" id="municipio" name="municipio" placeholder="Municipio">
+                <br>
 
-            <Div class="linea"><label class="LabG">referencia del lugar</label>
-            <input type="text" id="referencia_lugar" name="referencia_lugar" class="FieG">
-            </Div>
+                <label>Referencia del Lugar</label>
+                <input type="text" id="referencia_lugar" name="referencia_lugar" placeholder="Referencia del Lugar">
+                <br>
 
-            <Div class="linea"><label class="LabG">articulo o fundamento</label>
-            <input type="text" id="articulo_fundamento" name="articulo_fundamento" class="FieG">
-            </Div>
+                <label>Articulo o Fundamento</label>
+                <input type="text" id="articulo_fundamento" name="articulo_fundamento" placeholder="Apellido Materno">
+                <br>
 
-            <Div class="linea"><label class="LabG">motivo</label>
-            <input type="text" id="motivo" name="motivo" class="FieG">
-            </Div>
+                <label>Motivo</label>
+                <input type="text" id="motivo" name="motivo" placeholder="Motivo">
+                <br>
 
-            <Div class="linea"><label class="LabG">garantia retenida</label>
-            <input type="text" id="garantia_retenida" name="garantia_retenida" class="FieG">
-            </Div>
+                <label>Garantia Retenida</label>
+                <input type="text" id="garantia_retenida" name="garantia_retenida" placeholder="Garantia Retenida">
+                <br>
 
-            <Div class="linea"><label class="LabG">convenio</label>
-            <input type="text" id="convenio" name="convenio" class="FieG">
-            </Div>
+                <label>Convenio</label>
+                <input type="text" id="convenio" name="convenio" placeholder="Convenio">
+                <br>
 
-            <Div class="linea"><label class="LabG">puesto a disposicion</label>
-            <input type="checkbox" id="puesto_a_disposicion" name="puesto_a_disposicion" class="FieG">
-            </Div>
+                <input type="checkbox" id="puesto_a_disposicion" name="puesto_a_disposicion"><label>Puesto a Disposicion</label>
+                <br>
 
-            <Div class="linea"><label class="LabG">calificacion boleta</label>
-            <input type="text" id="calificacion_boleta" name="calificacion_boleta" class="FieG">
-            </Div>
+                <label>Calificacion Boleta</label>
+                <input type="number" id="calificacion_boleta" name="calificacion_boleta"
+                       placeholder="Calificacion Boleta">
+                <br>
 
-            <Div class="linea"><label class="LabG">deposito oficial</label>
-            <input type="text" id="deposito_oficial" name="deposito_oficial" class="FieG">
-            </Div>
+                <label>Deposito Oficial</label>
+                <input type="text" id="deposito_oficial" name="deposito_oficial" placeholder="Deposito Oficial">
+                <br>
 
-            <Div class="linea"><label class="LabG">observaciones del personal operativo</label>
-            <input type="text" id="observaciones_personal_operativo" name="observaciones_personal_operativo" class="FieG">
-            </Div>
+                <label>Observaciones del Personal Operativo</label>
+                <input type="text" id="observaciones_personal_operativo" name="observaciones_personal_operativo"
+                       placeholder="Observaciones del Personal Operativo">
+                <br>
 
-            <Div class="linea"><label class="LabG">observaciones del conductor</label>
-            <input type="text" id="observaciones_conductor" name="observaciones_conductor" class="FieG">
-            </Div>
+                <label>Observaciones del Conductor</label>
+                <input type="text" id="observaciones_conductor" name="observaciones_conductor"
+                       placeholder="Observaciones del Conductor">
+                <br>
 
-            <Div class="linea"><label class="LabG">numero de parte del accidente</label>
-            <input type="number" id="numero_parte_accidente" name="numero_parte_accidente" class="FieG">
-            </Div>
+                <label>Numero de Parte del Accidente</label>
+                <input type="number" id="numero_parte_accidente" name="numero_parte_accidente"
+                       placeholder="Numero de Parte del Accidente">
+                <br>
 
-            <Div class="linea"><label class="LabG">id del personal operativo</label>
-            <input type="number" id="id_personal_operativo" name="id_personal_operativo" class="FieG">
-            </Div>
-            
-            <Div class="linea"><label class="LabG">id de la tarjeta de circulacion</label>
-            <input type="number" id="id_tarjeta_circulacion" name="id_tarjeta_circulacion" class="FieG">
-            </Div>
+                <label>ID del Personal Operativo</label>
+                <input type="number" id="id_personal_operativo" name="id_personal_operativo"
+                       placeholder="ID del Personal Operativo">
+                <br>
 
-            <Div class="linea"><label class="LabG">id de la licencia</label>
-            <input type="text" id="id_licencia" name="id_licencia" class="FieG">
-            </Div>
+                <label>ID de la Tarjeta de Circulacion</label>
+                <input type="number" id="id_tarjeta_circulacion" name="id_tarjeta_circulacion"
+                       placeholder="ID de la Tarjeta de Circulacion">
+                <br>
 
-            <Div class="linea"><label class="LabG">id del vehiculo</label>
-            <input type="number" id="id_vehiculo" name="id_vehiculo" class="FieG">
-            </Div>
- 
-            <input type="submit" value="Aceptar" class="BotG">
+                <label>ID de la Licencia</label>
+                <input type="text" id="id_licencia" name="id_licencia" placeholder="ID de la Licencia">
+                <br>
 
-            <Div class="Div2">
-            </Div>
-            
-        </form>
-        </Div>
+                <label>ID del Vehiculo</label>
+                <input type="number" id="id_vehiculo" name="id_vehiculo" placeholder="ID del Vehiculo">
+                <br>
+
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>
 

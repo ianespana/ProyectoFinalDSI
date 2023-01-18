@@ -1,4 +1,4 @@
-<html class="PriB">
+<html>
     <head>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script>
@@ -8,85 +8,79 @@
                 })
             }
         </script>
-       <link rel="stylesheet" href="http://localhost/DSI31/proyecto_final/insert/Diseño.css">
+        <link rel="stylesheet" href="../main.css">
     </head>
     <body>
         <div id="include"></div>
-        
-        <p class="TitG">
-            <label>Conductores</label>
-        </p>
 
-        <Div class="Div1">
-            <Div class="Div2">
-            </Div>
+        <div class="container">
+            <form method="post" action="./conductores.php" enctype="multipart/form-data">
+                <p>
+                <h1>Conductores</h1>
+                </p>
 
-            <form method="post" action="./conductores.php" enctype="multipart/form-data" class="CueI">
-                
-            <Div class="linea"><label class="LabG">nombre</label>
-            <input type="text" id="nombre" name="nombre" class="FieG">
-            </Div>     
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <br>
 
-            <Div class="linea"><label class="LabG">apellido paterno</label>
-            <input type="text" id="apellido_paterno" name="apellido_paterno" class="FieG">
-            </Div>   
+                <label for="apellido_paterno">Apellido Paterno</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" placeholder="Apellido Paterno">
+                <br>
 
-            <Div class="linea"><label class="LabG">apellido materno</label>
-            <input type="text" id="apellido_materno" name="apellido_materno" class="FieG">
-            </Div>    
+                <label for="apellido_materno">Apellido Materno</label>
+                <input type="text" id="apellido_materno" name="apellido_materno" placeholder="Apellido Materno">
+                <br>
 
-            <Div class="linea"><label class="LabG">domicilio</label>
-            <input type="text" id="domicilio" name="domicilio" class="FieG">
-            </Div>  
+                <label for="domicilio">Domicilio</label>
+                <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio">
+                <br>
 
-            <Div class="linea"><label class="LabG">fecha nacimiento</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="FieG">
-            </Div>  
+                <label for="fecha_nacimiento">Fecha Nacimiento</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                <br>
 
-            <Div class="linea"><label class="LabG">sexo</label>
-            <input type="radio" id="hombre" name="sexo" value="hombre" class="FieG"><label for="hombre" class="FieG" hm="hhmm">Hombre</label>
-            <input type="radio" id="mujer" name="sexo" value="mujer" class="FieG"><label for="mujer" class="FieG" hm="hhmm">Mujer</label>
-            </Div>    
+                <label>Sexo</label>
+                <div>
+                    <input type="radio" id="hombre" name="sexo" value="hombre"><label for="hombre">Hombre</label>
+                    <input type="radio" id="mujer" name="sexo" value="mujer"><label for="mujer">Mujer</label>
+                </div>
+                <br>
 
-            <Div class="linea"><label class="LabG">firma</label>
-            <input type="file" id="firma_file" name="firma_file" class="FieG">
-            </Div>
+                <label for="firma">Firma</label>
+                <input type="file" id="firma_file" name="firma_file">
+                <br>
 
-            <Div class="linea"><label class="LabG">numero de emergencia</label>
-            <input type="number" id="num_emergencia" name="num_emergencia" class="FieG">
-            </Div> 
+                <label for="num_emergencia">Numero de Emergencia</label>
+                <input type="number" id="num_emergencia" name="num_emergencia" placeholder="Numero de Emergencia" min="10" max="10">
+                <br>
 
-            <Div class="linea"><label class="LabG">donador</label>
-            <input type="checkbox" id="donador" name="donador" class="FieG" class="AfCh" EsCh="ChSty" >
-            </Div>   
+                <input type="checkbox" id="donador" name="donador"><label for="donador">Donador</label>
+                <br>
 
-            <Div class="linea"><label class="LabG">antiguedad</label>
-            <input type="date" id="antiguedad" name="antiguedad" class="FieG">
-            </Div>
+                <label for="antiguedad">Antiguedad</label>
+                <input type="date" id="antiguedad" name="antiguedad">
+                <br>
 
-            <Div class="linea"><label class="LabG">grupo sanguineo</label>
-            <select id="grupo_sanguineo" name="grupo_sanguineo" class="FieG">
-                <option>A+</option>
-                <option>A-</option>
-                <option>B+</option>
-                <option>B-</option>
-                <option>AB+</option>
-                <option>AB-</option>
-                <option>O+</option>
-                <option>O-</option>
-            </select>
-            </Div>
+                <label for="grupo_sanguineo">Grupo Sanguineo</label>
+                <select id="grupo_sanguineo" name="grupo_sanguineo">
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                </select>
+                <br>
 
-            <Div class="linea"><label class="LabG">restricciones</label>
-            <input type="text" id="restricciones" name="restricciones" class="FieG">
-            </Div>
+                <label for="restricciones">Restricciones</label>
+                <input type="text" id="restricciones" name="restricciones" placeholder="Restricciones">
+                <br>
 
-            <input type="submit" value="Aceptar" class="BotG">
-
-            <Div class="Div2">
-            </Div>
-
-        </form></Div>
+                <input type="submit">
+            </form>
+        </div>
     </body>
 </html>
 
@@ -98,7 +92,8 @@
         $uploadResult = ProcessUpload($_FILES, "firma_file");
         if ($uploadResult->valid){
             if (move_uploaded_file($uploadResult->urlTemp, $uploadResult->urlTarget)) {
-                $_POST["firma"] = $uploadResult->urlTarget;
+                $_POST["firma"] = $uploadResult->urlRelativeDir;
+                print($uploadResult->urlRelativeDir);
                 $results = InsertArray("conductores", $_POST, ["id", "firma_file"]);
 
                 print("<br>Filas aftectadas: " . $results->affectedRows);
