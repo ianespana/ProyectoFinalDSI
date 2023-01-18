@@ -66,15 +66,9 @@
 
 <?php
     include "../sql_lib.php";
+    include "../utils.php";
 
     if(isset($_POST["id"])) {
-        $query = "INSERT INTO licencias SET";
-        foreach ($_POST as $key => $value) {
-            $query .= " $key = '$value',";
-        }
-        $query = rtrim($query, ",");
-        $results = RunQuery($query);
-
-        print("<br>$query");
+        $results = InsertArray("licencias", $_POST, []);
         print("<br>Filas aftectadas: " . $results->affectedRows);
     }

@@ -83,19 +83,12 @@
         </Div>
     </body>
 </html>
+
 <?php
     include "../sql_lib.php";
+    include "../utils.php";
 
     if(isset($_POST["entidad_federativa"])) {
-        $query = "INSERT INTO verificaciones SET";
-        foreach ($_POST as $key => $value) {
-            if ($key != "id" && $value) {
-                $query .= " $key = '$value',";
-            }
-        }
-        $query = rtrim($query, ",");
-        $results = RunQuery($query);
-
-        print("<br>$query");
+        $results = InsertArray("verificaciones", $_POST, ["id"]);
         print("<br>Filas aftectadas: " . $results->affectedRows);
     }

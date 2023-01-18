@@ -132,17 +132,12 @@
         </Div>
     </body>
 </html>
+
 <?php
     include "../sql_lib.php";
+    include "../utils.php";
 
     if(isset($_POST["id"])) {
-        $query = "INSERT INTO multas SET";
-        foreach ($_POST as $key => $value) {
-            $query .= " $key = '$value',";
-        }
-        $query = rtrim($query, ",");
-        $results = RunQuery($query);
-
-        print("<br>$query");
+        $results = InsertArray("multas", $_POST, []);
         print("<br>Filas aftectadas: " . $results->affectedRows);
     }

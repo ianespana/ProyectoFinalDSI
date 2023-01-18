@@ -96,19 +96,12 @@
         </Div>
     </body>
 </html>
+
 <?php
     include "../sql_lib.php";
+    include "../utils.php";
 
     if(isset($_POST["tipo_servicio"])) {
-        $query = "INSERT INTO tarjetas_circulacion SET";
-        foreach ($_POST as $key => $value) {
-            if ($key != "id" && $value) {
-                $query .= " $key = '$value',";
-            }
-        }
-        $query = rtrim($query, ",");
-        $results = RunQuery($query);
-
-        print("<br>$query");
+        $results = InsertArray("tarjetas_circulacion", $_POST, ["id"]);
         print("<br>Filas aftectadas: " . $results->affectedRows);
     }
